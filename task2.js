@@ -57,6 +57,7 @@ function task22(year, month, arr) {
     },{paymentSum: 0, monthWithdrawal: 0, replenishmentSum: 0});
 
         return {
+            date: new Date(year, month, new Date(year, month + 1).getDate() - 1).toISOString().slice(0, 10),
             monthBalance: current.monthBalance,
             monthWithrawal: current.monthWithdrawal, 
             withdrawalRate: current.withdrawalRate, 
